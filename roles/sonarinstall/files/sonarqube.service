@@ -1,0 +1,11 @@
+[Unit]
+Description=Sonarqube instance from a Docker container
+Requires=docker.service
+After=docker.service
+
+[Service]
+ExecStart=/usr/bin/docker start -a sonarqube
+ExecStop=/usr/bin/docker stop -t 2 sonarqube
+
+[Install]
+WantedBy=default.target
