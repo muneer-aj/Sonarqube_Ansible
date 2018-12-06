@@ -1,4 +1,4 @@
 - hosts: controller
   connection: local
   roles:
-    - { role: sonarinstall }
+    - { role: sonar_rhel_install }
